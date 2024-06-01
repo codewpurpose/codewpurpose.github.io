@@ -48,6 +48,10 @@
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
+span.protectedNumber:before {
+    content: attr(title);
+}
+
 body {
   color: var(--default-color);
   background-color: var(--background-color);
