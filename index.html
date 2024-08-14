@@ -7,10 +7,9 @@
   <title>CodeWithPurpose</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
-
-  <meta property="og:title" content="CodeWithPurpose">
-  <meta property="og:description" content="Philanthropic Business">
-  <meta property="og:image" content="assets/img/logo-main.png">
+  <meta property="og:title" content="Write your desired title">
+  <meta property="og:description" content="Write the body text here">
+  <meta property="og:image" content="https://hypixelfarms.github.io/images/1.jpeg">
 
   <!-- Favicons -->
   <link href="assets/img/logo-main.png" rel="icon">
@@ -45,6 +44,7 @@
     ml('account', '941292');
   </script>
   <!-- End MailerLite Universal -->
+  <script src="assets/js/loading.js"></script>
 
   <!-- =======================================================
   * Template Name: Mentor
@@ -55,7 +55,17 @@
   ======================================================== -->
 </head>
 
-<body class="index-page">
+<body class="index-page remove-scrolling">
+  <div id="loader">
+    <div class="cssload-main">
+      <div class="cssload-heart">
+        <span class="cssload-heartL"></span>
+        <span class="cssload-heartR"></span>
+        <span class="cssload-square"></span>
+      </div>
+      <div class="cssload-shadow"></div>
+    </div>
+  </div>
 
   <header id="header" class="header d-flex align-items-center sticky-top">
     <div class="container-fluid container-xl position-relative d-flex align-items-center">
@@ -110,7 +120,8 @@
     <!-- Hero Section -->
     <section id="hero" class="hero section">
 
-      <img src="assets/img/home_page.jpg" alt="" data-aos="fade-in">
+      <img onload="loaded()" src="assets/img/home_page.jpg" alt="" data-aos="fade-in" class="parallax">
+      <!--<div data-aos="fade-in" class="parallax">hello</div>!-->
 
       <div class="container">
         <h2 data-aos="fade-up" data-aos-delay="100" class="">Coding with a Purpose</h2>
@@ -162,7 +173,28 @@
               <li><i class="bi bi-check-circle"></i> <span><strong>50%</strong> of generated revenue are donated to local charities!</span></li>
               <li><i class="bi bi-check-circle"></i> <span>All of our programs will take place in Summer.</span></li>
             </ul> -->
-            <a href="#why-us" class="read-more"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
+            <button class="readmore-btn">
+              <span class="book-wrapper">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="rgb(86, 69, 117)" viewBox="0 0 126 75" class="book">
+                  <rect stroke-width="3" stroke="#fff" rx="7.5" height="70" width="121" y="2.5" x="2.5"></rect>
+                  <line stroke-width="3" stroke="#fff" y2="75" x2="63.5" x1="63.5"></line>
+                  <path stroke-linecap="round" stroke-width="4" stroke="#fff" d="M25 20H50"></path>
+                  <path stroke-linecap="round" stroke-width="4" stroke="#fff" d="M101 20H76"></path>
+                  <path stroke-linecap="round" stroke-width="4" stroke="#fff" d="M16 30L50 30"></path>
+                  <path stroke-linecap="round" stroke-width="4" stroke="#fff" d="M110 30L76 30"></path>
+                </svg>
+
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 65 75" class="book-page">
+                  <path stroke-linecap="round" stroke-width="4" stroke="#fff" d="M40 20H15"></path>
+                  <path stroke-linecap="round" stroke-width="4" stroke="#fff" d="M49 30L15 30"></path>
+                  <path stroke-width="3" stroke="#fff"
+                    d="M2.5 2.5H55C59.1421 2.5 62.5 5.85786 62.5 10V65C62.5 69.1421 59.1421 72.5 55 72.5H2.5V2.5Z">
+                  </path>
+                </svg>
+              </span>
+              <span class="text"> <a href="about.html">Read more</a </span>
+            </button>
+
           </div>
 
         </div>
@@ -223,9 +255,7 @@
                 Our Instruction and Bootcamps provide a unique opportunity to support good causes and for you to develop
                 new skills.
               </p>
-              <div class="text-center">
-                <a href="about.html" class="more-btn"><span>Learn More</span> <i class="bi bi-chevron-right"></i></a>
-              </div>
+              <button><a href="about.html">Learn More</a></button>
             </div>
           </div><!-- End Why Box -->
 
@@ -433,7 +463,9 @@
                 <h3><a href="https://eastbayspca.org/donate" target="_blank">East Bay SPCA</a></h3>
                 <p class="description">The East Bay SPCA has been saving lost and abandoned animals since 1874. They are
                   an independent, nonprofit organization serving Alameda and Contra Costa Counties. They operate two
-                  Adoption and Education Centers, two Spay/Neuter Surgery Centers and a full-service Veterinary Clinic. <strong>Please leave a comment, "I Came From CodeWithPurpose"</strong>. In this way, we can track how many donations has been donated to East Bay SPCA through our organizatin!
+                  Adoption and Education Centers, two Spay/Neuter Surgery Centers and a full-service Veterinary Clinic.
+                  <strong>Please leave a comment, "I Came From CodeWithPurpose"</strong>. In this way, we can track how
+                  many donations has been donated to East Bay SPCA through our organizatin!
                 </p>
                 <div class="trainer d-flex justify-content-between align-items-center">
                   <a href="https://eastbayspca.org/donate" target="_blank" class="trainer-link">Donate!</a>
@@ -443,27 +475,31 @@
           </div> <!-- End Course Item-->
 
 
-        <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in" data-aos-delay="200">
-          <div class="course-item d-flex justify-content-between align-items-center row gy-4">
-            <img src="assets/img/python_club_logo.png" class="img-fluid" alt="...">
-            <div class="course-content">
-              <div class="d-flex justify-content-between align-items-center mb-3">
-                <p class="category">Association</p>
-              </div>
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in"
+            data-aos-delay="200">
+            <div class="course-item d-flex justify-content-between align-items-center row gy-4">
+              <img src="assets/img/python_club_logo.png" class="img-fluid" alt="...">
+              <div class="course-content">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                  <p class="category">Association</p>
+                </div>
 
-              <h3><a href="https://shreyanmitra5.github.io/calhighpythonclub/" target="_blank">Cal High Python Club</a></h3>
-              <p class="description">This is a club in California High School, that teaches
-              Python to fellow students. The mission of this club is to teach curious teens how to implement Python in fun, creative and efficient ways, and prototype different ideas.</p>
-              
-                  <div class="trainer d-flex justify-content-between align-items-center">
-                    <a href="https://shreyanmitra5.github.io/calhighpythonclub/" target="_blank" class="trainer-link">Cal High Python Club</a>
-                  </div>
+                <h3><a href="https://shreyanmitra5.github.io/calhighpythonclub/" target="_blank">Cal High Python
+                    Club</a></h3>
+                <p class="description">This is a club in California High School, that teaches
+                  Python to fellow students. The mission of this club is to teach curious teens how to implement Python
+                  in fun, creative and efficient ways, and prototype different ideas.</p>
+
+                <div class="trainer d-flex justify-content-between align-items-center">
+                  <a href="https://shreyanmitra5.github.io/calhighpythonclub/" target="_blank" class="trainer-link">Cal
+                    High Python Club</a>
                 </div>
               </div>
             </div>
           </div>
-        </div> <!-- End Course Item-->
-        <!-- 
+        </div>
+      </div> <!-- End Course Item-->
+      <!-- 
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0" data-aos="zoom-in" data-aos-delay="300">
             <div class="course-item">
               <img src="assets/img/course-3.jpg" class="img-fluid" alt="...">
@@ -490,15 +526,15 @@
             </div>
           </div> <!-- End Course Item-->
 
-        <!-- 
+      <!-- 
         </div>
 
       </div>
 
     </section><!-- /Courses Section -->
 
-        <!-- Trainers Index Section -->
-        <!--
+      <!-- Trainers Index Section -->
+      <!--
     <section id="trainers-index" class="section trainers-index">
 
       <div class="container">
