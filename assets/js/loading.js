@@ -5,6 +5,6 @@ function loaded() {
     setTimeout(function() {
       l.parentNode.removeChild(l);
       document.body.classList.remove("remove-scrolling");
-    }, 1000)
+    }, 2000)
   }, 1000);
 }
