@@ -1893,7 +1893,7 @@ section,
   height: 100vh;
   z-index: 1000;
   background-color: var(--background-color);
-  transition: all 0s;
+  transition: opacity 2s;
   overflow-x: none;
 }
 
