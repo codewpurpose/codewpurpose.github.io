@@ -291,7 +291,7 @@ h6 {
     font-size: 28px;
     line-height: 0;
     margin-right: 10px;
-    cursor: pointer;
+    /*cursor: pointer;*/
     transition: color 0.3s;
   }
 
@@ -900,7 +900,7 @@ section,
   display: flex;
   align-items: center;
   justify-content: center;
-  cursor: pointer;
+  /*cursor: pointer;*/
   background-color: #059652;
   border: none;
   border-radius: 10px;
@@ -984,7 +984,8 @@ section,
 .why-us .why-box {
   color: var(--contrast-color);
   background: var(--accent-color);
-  padding: 30px;vw
+  padding: 30px;
+  vw
 }
 
 .why-us .why-box h3 {
@@ -2242,7 +2243,7 @@ button {
   border-radius: 45px;
   box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease 0s;
-  cursor: pointer;
+  /*cursor: pointer;*/
   outline: none;
 }
 
@@ -2266,12 +2267,13 @@ button:active {
   z-index: 1;
   color: #090909;
   padding: 0.7em 1.7em;
-  cursor: pointer;
+  /*cursor: pointer;*/
   font-size: 18px;
   border-radius: 0.5em;
   background: #ffffff;
   border: 1px solid #303030;
   box-shadow: 6px 6px 12px #fcfcfc, -6px -6px 12px #ffffff;
+  cursor: url("cursor3.svg") 3 3, auto;
 }
 
 .button2:active {
@@ -2327,16 +2329,19 @@ button:active {
 }
 
 .video::-webkit-media-controls-mute-button {
-  display: none;            
+  display: none;
 }
+
 .video::-webkit-media-controls-volume-slider {
-  display: none;            
+  display: none;
 }
-.video::-webkit-media-controls-current-time-display{
-  display: none;            
+
+.video::-webkit-media-controls-current-time-display {
+  display: none;
 }
+
 .video::-webkit-media-controls-time-remaining-display {
-  display: none;            
+  display: none;
 }
 
 .lg-view {
@@ -2365,4 +2370,28 @@ dotlottie-player {
   .hero video {
     z-index: -11;
   }
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--accent-color);
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  opacity: 0.7;
+}
+
+html, button, a, div {
+  cursor: url("cursor.svg") 3 3, auto;
 }
